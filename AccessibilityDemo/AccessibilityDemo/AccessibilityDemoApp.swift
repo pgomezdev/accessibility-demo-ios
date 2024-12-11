@@ -8,7 +8,6 @@ import SwiftUI
 @main
 struct AccessibilityDemoApp: App {
     @Environment(\.colorScheme) var colorScheme
-    
     @Environment(\.dynamicTypeSize) var dynamicTypeSize
     
     @Environment(\.accessibilityInvertColors) var invertColors
@@ -28,6 +27,12 @@ struct AccessibilityDemoApp: App {
         }
     }
     
+    /**
+     Collects accessibility settings and locale information.
+     
+     This method provides insight into the current accessibility settings and locale, which can be useful for understanding user needs
+     and improve accessibility.
+     */
     func getAccessibilitySettings() {
         print("colorScheme: \(colorScheme)")
         print("dynamicTypeSize: \(dynamicTypeSize)")

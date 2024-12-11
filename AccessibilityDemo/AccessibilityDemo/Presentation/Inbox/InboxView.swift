@@ -6,9 +6,8 @@
 import SwiftUI
 
 struct InboxView: View {
-    @Environment(\.accessibilityReduceMotion) var reduceMotion
     
-    @State var inboxItems: [InboxItem] = []
+    @State var inboxItems: [InboxMessage] = []
     @State var isEditing = false
     
     @Namespace private var warningsRotorNamespace
@@ -16,7 +15,7 @@ struct InboxView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                AppColor.background
+                Color(UIColor.systemGroupedBackground)
                     .ignoresSafeArea()
                 
                 ScrollViewReader { scrollView in
@@ -30,13 +29,21 @@ struct InboxView: View {
                                         Image(systemName: "trash.circle.fill")
                                             .resizable()
                                             .scaledToFit()
-                                            .foregroundStyle(AppColor.sad)
+                                            .foregroundStyle(Color.customNegative)
                                             .frame(
                                                 width: UIFontMetrics.default.scaledValue(for: 35),
                                                 height: UIFontMetrics.default.scaledValue(for: 35))
                                     })
-                                    .accessibilityLabel("Delete message")
-                                    .accessibilityHint("Delete \(inboxItems[index].type.rawValue) message starting with: \(inboxItems[index].message.prefix(30))")
+                                    .accessibilityLabel("inbox.delete.button.title")
+                                    .accessibilityHint(
+                                        Text(
+                                            String.localizedStringWithFormat(
+                                                NSLocalizedString("inbox.delete.accessibilityHint", comment: "Action for inbox item deletion"),
+                                                inboxItems[index].type.rawValue,
+                                                "\(inboxItems[index].message.prefix(30))"
+                                            )
+                                        )
+                                    )
                                 }
                                 
                                 VStack(alignment: .leading) {
@@ -49,16 +56,14 @@ struct InboxView: View {
                                             .accessibilitySortPriority(2)
                                         
                                         Text(inboxItems[index].date.medium)
-                                            .font(AppFont.body2)
-                                            .foregroundStyle(AppColor.onSurface)
+                                            .font(.brandCustom(for: .subheadline))
                                             .frame(maxWidth: .infinity, alignment: .leading)
                                             .accessibilityLabel(inboxItems[index].date.long)
                                             .accessibilitySortPriority(3)
                                     }
                                     
                                     Text(inboxItems[index].message)
-                                        .font(AppFont.body1)
-                                        .foregroundStyle(AppColor.onSurface)
+                                        .font(.brandCustom(for: .body))
                                         .accessibilitySortPriority(1)
                                 }
                                 .accessibilityElement(children: .combine)
@@ -72,7 +77,7 @@ struct InboxView: View {
                     }
                     .listStyle(.plain)
                     .accessibilityElement(children: .contain)
-                    .accessibilityRotor(Text("Warnings")) {
+                    .accessibilityRotor(Text("inbox.list.accessibilityRotor")) {
                         ForEach(inboxItems) { item in
                             if (item.type == .warning) {
                                 AccessibilityRotorEntry(Text(item.message), id: item.id, in: warningsRotorNamespace) {
@@ -83,44 +88,38 @@ struct InboxView: View {
                     }
                 }
             }
-            .navigationTitle("Inbox")
-            .toolbarBackground(AppColor.surface, for: .navigationBar)
+            .navigationTitle("inbox.navigation.title")
+            .toolbarBackground(Color(UIColor.systemBackground), for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: { isEditing.toggle() }, label: {
-                        Text(isEditing ? "Done" : "Edit")
-                            .font(AppFont.button)
+                        Text(isEditing ? "inbox.edit.button.done" : "inbox.edit.button.edit")
+                            .font(.brandCustom(for: .headline))
                     })
                     .accessibilityIdentifier(AccessibilityIdentifier.Inbox.editButton.build())
-                    .accessibilityHint(isEditing ? "Finishes editing messages" : "Edits messages")
+                    .accessibilityHint(isEditing ? "inbox.edit.button.hint.done" : "inbox.edit.button.hint.edit")
                 }
             }
         }
         .onAppear {
-            if (reduceMotion) {
-                loadData()
-            } else {
-                withAnimation {
-                    loadData()
-                }
-            }
+            loadData()
         }
     }
     
     private func loadData() {
-        inboxItems = Stub.inboxItems
+        inboxItems = StubData.inboxItems
     }
     
-    private func iconFor(inboxItem: InboxItem) -> AnyView {
+    private func iconFor(inboxItem: InboxMessage) -> AnyView {
         let (image, color) = switch inboxItem.type {
         case .information:
-            ("info.circle", AppColor.neutral)
+            ("info.circle", Color.gray)
         case .warning:
-            ("exclamationmark.triangle", AppColor.concerned)
+            ("exclamationmark.triangle", Color.customWarning)
         case .payment:
-            ("arrow.up.forward.circle", AppColor.sad)
+            ("arrow.up.forward.circle", Color.customNegative)
         case .income:
-            ("arrow.down.backward.circle", AppColor.happy)
+            ("arrow.down.backward.circle", Color.customPositive)
         }
              
         return AnyView(

@@ -10,19 +10,19 @@ struct RootView: View {
         TabView {
             HomeView()
                 .tabItem {
-                    Label("Home", systemImage: "house")
+                    Label("root.tab.home", systemImage: "house")
                 }
                 .accessibilityIdentifier(AccessibilityIdentifier.Root.homeButton.build())
             
             InboxView()
                 .tabItem {
-                    Label("Inbox", systemImage: "tray")
+                    Label("root.tab.inbox", systemImage: "tray")
                 }
                 .accessibilityIdentifier(AccessibilityIdentifier.Root.inboxButton.build())
             
             LocationsView()
                 .tabItem {
-                    Label("Map", systemImage: "map")
+                    Label("root.tab.map", systemImage: "map")
                 }
                 .accessibilityIdentifier(AccessibilityIdentifier.Root.mapButton.build())
         }

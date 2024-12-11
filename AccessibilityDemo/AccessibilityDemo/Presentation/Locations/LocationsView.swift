@@ -8,7 +8,6 @@ import CoreLocation
 import MapKit
 
 struct LocationsView: View {
-    @Environment(\.accessibilityReduceMotion) var reduceMotion
     
     @State var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 37.4419, longitude: -122.1430),
@@ -30,25 +29,19 @@ struct LocationsView: View {
             }
         }
         .accessibilityElement(children: .contain)
-        .accessibilityRotor(Text("ATMs")) {
+        .accessibilityRotor(Text("locations.map.accessibilityRotor")) {
             ForEach(pois.filter({$0.type == .atm})) { poi in
                 AccessibilityRotorEntry(Text(poi.name), id: poi.id, in: poiRotorNamespace)
             }
         }
         .edgesIgnoringSafeArea(.top)
         .onAppear {
-            if (reduceMotion) {
-                loadData()
-            } else {
-                withAnimation {
-                    loadData()
-                }
-            }
+            loadData()
         }
     }
     
     private func loadData() {
-        pois = Stub.pois
+        pois = StubData.pois
     }
     
     private func annotationImage(for type: POIType) -> String {

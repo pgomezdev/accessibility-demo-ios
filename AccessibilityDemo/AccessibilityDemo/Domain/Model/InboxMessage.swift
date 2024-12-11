@@ -1,17 +1,17 @@
 //
-//  InboxItem.swift
+//  InboxMessage.swift
 //  AccessibilityDemo
 //
 
 import Foundation
 
-enum InboxItemType: String {
+enum InboxMessageType: String {
     case information, warning, payment, income
 }
 
-struct InboxItem: Identifiable {
+struct InboxMessage: Identifiable {
     let id: String
-    let type: InboxItemType
+    let type: InboxMessageType
     let message: String
     let date: Date
 }

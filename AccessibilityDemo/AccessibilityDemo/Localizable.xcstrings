@@ -1,8 +1,15 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    ", balance %@" : {
+    "account.item.accessibilityLabel.balance" : {
+      "comment" : "Account balance description",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ", balance %@"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11,30 +18,15 @@
         }
       }
     },
-    ", credit %@" : {
+    "account.item.accessibilityLabel.description" : {
+      "comment" : "Account name and number description",
       "localizations" : {
-        "es" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ", crédito %@"
+            "value" : "%@, ending in %@"
           }
-        }
-      }
-    },
-    "%@, %@, ending in %@" : {
-      "comment" : "Refering to a debit/credit card",
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@, %@, terminada en %@"
-          }
-        }
-      }
-    },
-    "%@, ending in %@" : {
-      "comment" : "Refering to a bank account",
-      "localizations" : {
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -43,208 +35,14 @@
         }
       }
     },
-    "Accounts" : {
+    "account.item.hint" : {
       "localizations" : {
-        "es" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cuentas"
+            "value" : "Opens account movements"
           }
-        }
-      }
-    },
-    "ATMs" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cajeros"
-          }
-        }
-      }
-    },
-    "Budget history" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Historial de saldo"
-          }
-        }
-      }
-    },
-    "Budget History Graph" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gráfico del historial de saldo"
-          }
-        }
-      }
-    },
-    "Cards" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tarjetas"
-          }
-        }
-      }
-    },
-    "Delete message" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Borrar mensaje"
-          }
-        }
-      }
-    },
-    "Demo Bank Menu" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Menú Demo Bank"
-          }
-        }
-      }
-    },
-    "Done" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hecho"
-          }
-        }
-      }
-    },
-    "Edit" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Editar"
-          }
-        }
-      }
-    },
-    "Edits messages" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Edita los mensajes"
-          }
-        }
-      }
-    },
-    "Finishes editing messages" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Termina la edición de mensajes"
-          }
-        }
-      }
-    },
-    "Hide" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ocultar"
-          }
-        }
-      }
-    },
-    "Hide values" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ocultar valores"
-          }
-        }
-      }
-    },
-    "Hides account details" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Oculta los detalles de la cuenta"
-          }
-        }
-      }
-    },
-    "Home" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inicio"
-          }
-        }
-      }
-    },
-    "Inbox" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Buzón"
-          }
-        }
-      }
-    },
-    "Insurance" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Seguros"
-          }
-        }
-      }
-    },
-    "Map" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mapa"
-          }
-        }
-      }
-    },
-    "Menu" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Menú"
-          }
-        }
-      }
-    },
-    "Opens menu with all options" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abre el menú con todas las opciones"
-          }
-        }
-      }
-    },
-    "Opens this account's movements" : {
-      "localizations" : {
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -253,28 +51,174 @@
         }
       }
     },
-    "Opens this card's movements" : {
+    "budget.graph.title" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Budget History Graph"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Abre los movimientos de esta tarjeta"
+            "value" : "Gráfico del historial de saldo"
           }
         }
       }
     },
-    "Opens this insurance details" : {
+    "home.accounts.title" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accounts"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Abre los detalles de este seguro"
+            "value" : "Cuentas"
           }
         }
       }
     },
-    "Show" : {
+    "home.budget.title" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Budget history"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historial de saldo"
+          }
+        }
+      }
+    },
+    "home.hideValues.button.accessibilityHint.hide" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hides sensitive data"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oculta datos sensibles"
+          }
+        }
+      }
+    },
+    "home.hideValues.button.accessibilityHint.show" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shows sensitive data"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muestra datos sensibles"
+          }
+        }
+      }
+    },
+    "home.hideValues.button.accessibilityInputLabel.hide" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hide values"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oculta datos"
+          }
+        }
+      }
+    },
+    "home.hideValues.button.accessibilityInputLabel.show" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show data"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muestra datos"
+          }
+        }
+      }
+    },
+    "home.hideValues.button.accessibilityLabel.hide" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hide data"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oculta datos"
+          }
+        }
+      }
+    },
+    "home.hideValues.button.accessibilityLabel.show" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show data"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muestra datos"
+          }
+        }
+      }
+    },
+    "home.hideValues.button.title.hide" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hide"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ocultar"
+          }
+        }
+      }
+    },
+    "home.hideValues.button.title.show" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -283,42 +227,374 @@
         }
       }
     },
-    "Show values" : {
+    "home.insurance.title" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insurance"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mostrar valores"
+            "value" : "Seguros"
           }
         }
       }
     },
-    "Shows account details" : {
+    "home.menu.button.accessibilityHint" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opens main menu"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Muestra los detalles de la cuenta"
+            "value" : "Abre el menú principal"
           }
         }
       }
     },
-    "Total balance, %@" : {
+    "home.menu.button.accessibilityInputLabel" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Saldo total, %@"
+            "value" : "Menú"
           }
         }
       }
     },
-    "Warnings" : {
+    "home.menu.button.accessibilityLabel" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menú"
+          }
+        }
+      }
+    },
+    "home.menu.button.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menú"
+          }
+        }
+      }
+    },
+    "home.paymentCards.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cards"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tarjetas"
+          }
+        }
+      }
+    },
+    "inbox.delete.accessibilityHint" : {
+      "comment" : "Action for inbox item deletion",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete %@ message starting with: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete %@ message starting with: %@"
+          }
+        }
+      }
+    },
+    "inbox.delete.button.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar"
+          }
+        }
+      }
+    },
+    "inbox.edit.button.done" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hecho"
+          }
+        }
+      }
+    },
+    "inbox.edit.button.edit" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editar"
+          }
+        }
+      }
+    },
+    "inbox.edit.button.hint.done" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finishes editing messages"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Termina de editar los mensajes"
+          }
+        }
+      }
+    },
+    "inbox.edit.button.hint.edit" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edits messages"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edita los mensajes"
+          }
+        }
+      }
+    },
+    "inbox.list.accessibilityRotor" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warnings"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Avisos"
+          }
+        }
+      }
+    },
+    "inbox.navigation.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inbox"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buzón"
+          }
+        }
+      }
+    },
+    "insurance.item.hint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opens this insurance details"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre los detalles de este seguro"
+          }
+        }
+      }
+    },
+    "locations.map.accessibilityRotor" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ATMs"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ATMs"
+          }
+        }
+      }
+    },
+    "payment.item.accessibilityLabel.balance" : {
+      "comment" : "Payment card balance description",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ", balance %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ", saldo %@"
+          }
+        }
+      }
+    },
+    "payment.item.accessibilityLabel.credit" : {
+      "comment" : "Payment card credit description",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ", credit %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ", crédito %@"
+          }
+        }
+      }
+    },
+    "payment.item.accessibilityLabel.description" : {
+      "comment" : "Payment card description",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %@, ending in %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %@, terminada en %@"
+          }
+        }
+      }
+    },
+    "payment.item.hint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opens card movements"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre los movimientos de esta tarjeta"
+          }
+        }
+      }
+    },
+    "root.tab.home" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Home"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicio"
+          }
+        }
+      }
+    },
+    "root.tab.inbox" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inbox"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buzón"
+          }
+        }
+      }
+    },
+    "root.tab.map" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Map"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mapa"
           }
         }
       }

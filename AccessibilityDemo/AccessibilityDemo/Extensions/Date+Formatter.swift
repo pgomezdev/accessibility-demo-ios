@@ -6,6 +6,7 @@
 import Foundation
 
 extension Date {
+    
     var short: String {
         let formatter = DateFormatter()
         formatter.dateStyle = .short

@@ -8,4 +8,5 @@ import Foundation
 struct Insurance {
     let name: String
     let value: Double
+    let logoName: String
 }

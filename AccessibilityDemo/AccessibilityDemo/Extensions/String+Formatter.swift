@@ -7,6 +7,8 @@ import Foundation
 
 extension String {
     
+    // MARK: - Currency
+    
     static func localizedCurrency(from value: Double, maxDecimals: Int = 2) -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
@@ -14,11 +16,7 @@ extension String {
         return formatter.string(from: NSNumber(value: value)) ?? "\(value)"
     }
     
-    static let maskedCharacters = "*****"
-    
-    func masked(_ mask: Bool) -> String {
-        mask ? String.maskedCharacters : self
-    }
+    // MARK: - Date
     
     static func monthName(from monthNumber: Int) -> String? {
         guard monthNumber >= 1 && monthNumber <= 12 else {
@@ -36,5 +34,11 @@ extension String {
         }
         
         return nil
+    }
+    
+    // MARK: - Custom
+    
+    func masked(_ mask: Character = "*") -> String {
+        String(repeating: mask, count: self.count)
     }
 }

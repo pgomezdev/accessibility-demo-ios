@@ -14,15 +14,15 @@ struct BudgetGraph: View {
         GeometryReader { proxy in
             VStack {
                 Canvas { ctx, size in
-                    if isLargeTypeSize {
+                    if typeSize.isAccessibilitySize {
                         drawRows(ctx: ctx, size: size, budgets: budgets, inset: 0)
                     } else {
                         drawColumns(ctx: ctx, size: size, budgets: budgets, inset: 25)
                     }
                 }
-                .accessibilityLabel("Budget History Graph")
+                .accessibilityLabel("budget.graph.title")
                 .accessibilityChildren {
-                    if isLargeTypeSize {
+                    if typeSize.isAccessibilitySize {
                         VStack {
                             ForEach(budgets) { budget in
                                 Rectangle()
@@ -46,12 +46,9 @@ struct BudgetGraph: View {
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 16)
-                .foregroundColor(Color(white: 0.9)))
+                .foregroundColor(Color(UIColor.systemBackground))
+            )
         .padding(.horizontal)
-    }
-    
-    private var isLargeTypeSize: Bool {
-        typeSize > .accessibility1
     }
     
     private func drawColumns(ctx: GraphicsContext, size: CGSize, budgets: [Budget], inset: CGFloat) {
@@ -104,6 +101,6 @@ struct BudgetGraph: View {
     }
 }
 
-#Preview {
-    BudgetGraph(budgets: Stub.budgets)
+#Preview(traits: .sizeThatFitsLayout) {
+    BudgetGraph(budgets: StubData.budgets)
 }

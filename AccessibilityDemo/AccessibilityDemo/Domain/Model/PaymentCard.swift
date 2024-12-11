@@ -1,16 +1,16 @@
 //
-//  DebitCreditCard.swift
+//  PaymentCard.swift
 //  AccessibilityDemo
 //
 
 import Foundation
 
-enum DebitCreditCardType: String {
+enum PaymentCardType: String {
     case visa, masterCard
 }
 
-struct DebitCreditCard {
-    let type: DebitCreditCardType
+struct PaymentCard {
+    let type: PaymentCardType
     let name: String
     let number: Int
     let balance: Double
