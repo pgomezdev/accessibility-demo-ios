@@ -52,7 +52,7 @@ struct InboxView: View {
                                             .frame(
                                                 width: UIFontMetrics.default.scaledValue(for: 20),
                                                 height: UIFontMetrics.default.scaledValue(for: 20))
-                                            .accessibilityLabel(inboxItems[index].type.rawValue)
+                                            .accessibilityLabel(inboxItems[index].type.accessibilityLabel)
                                             .accessibilitySortPriority(2)
                                         
                                         Text(inboxItems[index].date.medium)

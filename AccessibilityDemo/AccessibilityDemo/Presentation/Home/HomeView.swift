@@ -30,6 +30,7 @@ struct HomeView: View {
                         insuranceView
                         budgetView
                     }
+                    .padding(.bottom)
                 }
             }
             .toolbarBackground(Color(UIColor.systemBackground), for: .navigationBar)
@@ -38,15 +39,11 @@ struct HomeView: View {
                     Button(action: {
                         // TODO: open menu
                     }, label: {
-                        VStack(spacing: 0) {
-                            Image("Logo")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: navBarImageSize, height: navBarImageSize)
-                                .accessibilityIgnoresInvertColors()
-                            Text("home.menu.button.title")
-                                .font(.brandCustom(for: .body))
-                        }
+                        Image("Logo")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: navBarImageSize, height: navBarImageSize)
+                            .accessibilityIgnoresInvertColors()
                     })
                     .accessibilityLabel("home.menu.button.accessibilityLabel")
                     .accessibilityHint("home.menu.button.accessibilityHint")
@@ -55,14 +52,10 @@ struct HomeView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: { isHidingValues.toggle() }, label: {
-                        VStack(spacing: 0) {
-                            Image(systemName: isHidingValues ? "eye" : "eye.slash")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: navBarImageSize, height: navBarImageSize)
-                            Text(isHidingValues ? "home.hideValues.button.title.show" : "home.hideValues.button.title.hide")
-                                .font(.brandCustom(for: .body))
-                        }
+                        Image(systemName: isHidingValues ? "eye" : "eye.slash")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: navBarImageSize, height: navBarImageSize)
                     })
                     .accessibilityIdentifier(AccessibilityIdentifier.Home.hideValuesButton.build())
                     .accessibilityLabel(isHidingValues ? "home.hideValues.button.accessibilityLabel.show" : "home.hideValues.button.accessibilityLabel.hide")

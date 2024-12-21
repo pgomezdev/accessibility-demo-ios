@@ -21,7 +21,7 @@ struct InsuranceViewItem: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
             .padding()
-            .background(Color(UIColor.systemBackground))
+            .background(Color.onSupplementary)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .frame(height: 100)
             .accessibilityElement(children: .combine)

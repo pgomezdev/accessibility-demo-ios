@@ -18,13 +18,13 @@ extension String {
     
     // MARK: - Date
     
-    static func monthName(from monthNumber: Int) -> String? {
+    static func monthName(from monthNumber: Int, short: Bool = false) -> String? {
         guard monthNumber >= 1 && monthNumber <= 12 else {
             return nil
         }
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMM"
+        dateFormatter.dateFormat = short ? "MMM" : "MMMM"
         
         let calendar = Calendar.current
         let dateComponents = DateComponents(calendar: calendar, month: monthNumber)

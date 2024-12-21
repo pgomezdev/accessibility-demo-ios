@@ -4,6 +4,7 @@
 //
 
 import SwiftUI
+import Charts
 
 struct BudgetGraph: View {
     @Environment(\.dynamicTypeSize) var typeSize
@@ -11,43 +12,54 @@ struct BudgetGraph: View {
     let budgets: [Budget]
     
     var body: some View {
-        GeometryReader { proxy in
-            VStack {
-                Canvas { ctx, size in
-                    if typeSize.isAccessibilitySize {
-                        drawRows(ctx: ctx, size: size, budgets: budgets, inset: 0)
-                    } else {
-                        drawColumns(ctx: ctx, size: size, budgets: budgets, inset: 25)
+        VStack {
+            if typeSize.isAccessibilitySize {
+                Chart {
+                    ForEach(budgets) { budget in
+                        BarMark(
+                            x: .value("budget.chart.amount.key", budget.amount),
+                            y: .value("budget.chart.month.key", String.monthName(from: budget.month, short: true) ?? budget.id)
+                        )
+                        .foregroundStyle(Color.green)
+                        .accessibilityLabel(String.monthName(from: budget.month) ?? budget.id)
+                        .accessibilityValue(String.localizedCurrency(from: budget.amount, maxDecimals: 0))
                     }
                 }
-                .accessibilityLabel("budget.graph.title")
-                .accessibilityChildren {
-                    if typeSize.isAccessibilitySize {
-                        VStack {
-                            ForEach(budgets) { budget in
-                                Rectangle()
-                                    .accessibilityLabel(String.monthName(from: budget.month) ?? budget.id)
-                                    .accessibilityValue(String.localizedCurrency(from: budget.amount, maxDecimals: 0))
-                            }
-                        }
-                    } else {
-                        HStack {
-                            ForEach(budgets) { budget in
-                                Rectangle()
-                                    .accessibilityLabel(String.monthName(from: budget.month) ?? budget.id)
-                                    .accessibilityValue(String.localizedCurrency(from: budget.amount, maxDecimals: 0))
-                            }
-                        }
+                .chartYAxis {
+                    AxisMarks(preset: .aligned, values: .automatic)
+                }
+                .chartXAxis {
+                    AxisMarks(preset: .aligned, values: .automatic)
+                }
+                .accessibilityLabel("budget.chart.accessibilityLabel")
+                .accessibilityHint("budget.chart.accessibilityHint")
+            } else {
+                Chart {
+                    ForEach(budgets) { budget in
+                        BarMark(
+                            x: .value("budget.chart.month.key", String.monthName(from: budget.month, short: true) ?? budget.id),
+                            y: .value("budget.chart.amount.key", budget.amount)
+                        )
+                        .foregroundStyle(Color.green)
+                        .accessibilityLabel(String.monthName(from: budget.month) ?? budget.id)
+                        .accessibilityValue(String.localizedCurrency(from: budget.amount, maxDecimals: 0))
                     }
                 }
-                
+                .chartXAxis {
+                    AxisMarks(preset: .aligned, values: .automatic)
+                }
+                .chartYAxis {
+                    AxisMarks(preset: .aligned, values: .automatic)
+                }
+                .accessibilityLabel("budget.chart.accessibilityLabel")
+                .accessibilityHint("budget.chart.accessibilityHint")
             }
         }
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 16)
-                .foregroundColor(Color(UIColor.systemBackground))
-            )
+                .foregroundColor(Color.onSupplementary)
+        )
         .padding(.horizontal)
     }
     

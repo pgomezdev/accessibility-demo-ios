@@ -22,7 +22,7 @@ struct AccountViewItem: View {
                 .frame(maxWidth: .infinity, alignment: .trailing)
         }
         .padding()
-        .background(Color(UIColor.systemBackground))
+        .background(Color.onSupplementary)
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .accessibilityElement(children: .combine)
         .accessibilityAddTraits(.isButton)
