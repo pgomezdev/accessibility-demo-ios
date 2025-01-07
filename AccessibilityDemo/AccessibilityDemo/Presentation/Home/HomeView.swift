@@ -39,7 +39,7 @@ struct HomeView: View {
                     Button(action: {
                         // TODO: open menu
                     }, label: {
-                        Image("Logo")
+                        Image(systemName: "line.3.horizontal.circle.fill")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: navBarImageSize, height: navBarImageSize)
@@ -50,15 +50,22 @@ struct HomeView: View {
                     .accessibilityInputLabels(["home.menu.button.accessibilityInputLabel"])
                 }
                 
+                ToolbarItem(placement: .principal) {
+                    Image("Logo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: navBarImageSize, height: navBarImageSize)
+                        .accessibilityIgnoresInvertColors()
+                        .accessibilityHidden(true)
+                }
+                
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: { isHidingValues.toggle() }, label: {
-                        Image(systemName: isHidingValues ? "eye" : "eye.slash")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: navBarImageSize, height: navBarImageSize)
-                    })
+                    Toggle(isOn: $isHidingValues) {
+                        Text(isHidingValues ? "home.hideValues.button.show" : "home.hideValues.button.hide")
+                    }
+                    .toggleStyle(SwitchToggleStyle())
                     .accessibilityIdentifier(AccessibilityIdentifier.Home.hideValuesButton.build())
-                    .accessibilityLabel(isHidingValues ? "home.hideValues.button.accessibilityLabel.show" : "home.hideValues.button.accessibilityLabel.hide")
+                    .accessibilityValue(isHidingValues ? "home.hideValues.button.accessibilityValue.on" : "home.hideValues.button.accessibilityValue.off")
                     .accessibilityHint(isHidingValues ? "home.hideValues.button.accessibilityHint.show" : "home.hideValues.button.accessibilityHint.hide")
                     .accessibilityInputLabels(isHidingValues ? ["home.hideValues.button.accessibilityInputLabel.show"] : ["home.hideValues.button.accessibilityInputLabel.hide"])
                 }

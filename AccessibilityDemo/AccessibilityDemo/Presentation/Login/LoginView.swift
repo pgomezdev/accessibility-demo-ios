@@ -62,7 +62,10 @@ struct LoginView: View {
                     }
                 }
                 
-                Button("login.clear.button.title", action: { enteredPin.removeLast() })
+                Button("login.clear.button.title", action: {
+                    guard !enteredPin.isEmpty else { return }
+                    enteredPin.removeLast()
+                })
                     .foregroundColor(.red)
                     .frame(width: 80, height: 80)
                     .accessibilityHint("login.clear.button.hint")

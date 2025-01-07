@@ -221,12 +221,44 @@
         }
       }
     },
-    "home.hideValues.button.accessibilityLabel.hide" : {
+    "home.hideValues.button.accessibilityValue.off" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hide data"
+            "value" : "Disabled"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desactivado"
+          }
+        }
+      }
+    },
+    "home.hideValues.button.accessibilityValue.on" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enabled"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activado"
+          }
+        }
+      }
+    },
+    "home.hideValues.button.hide" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hide values"
           }
         },
         "es" : {
@@ -237,12 +269,12 @@
         }
       }
     },
-    "home.hideValues.button.accessibilityLabel.show" : {
+    "home.hideValues.button.show" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Show data"
+            "value" : "Show values"
           }
         },
         "es" : {
