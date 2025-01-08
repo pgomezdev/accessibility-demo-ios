@@ -73,6 +73,8 @@ extension Font {
         Example: Tiny labels for status icons or tooltips.
      */
     static func brandCustom(for textStyle: Font.TextStyle, fixedSize: Bool = false) -> Font {
+        let useBoldText = UIAccessibility.isBoldTextEnabled
+        
         let defaultFontSize = Font.preferredFontSize(for: textStyle)
         let defaultFontName = Font.defaultFontName(for: textStyle)
         
@@ -98,10 +100,10 @@ extension Font {
             fontName = "AvenirNext-Bold"
             fontSize = 15
         case .body:
-            fontName = "AvenirNext-Regular"
+            fontName = useBoldText ? "AvenirNext-Bold" : "AvenirNext-Regular"
             fontSize = 17
         case .callout:
-            fontName = "AvenirNext-Regular"
+            fontName = useBoldText ? "AvenirNext-Bold" : "AvenirNext-Regular"
             fontSize = 16
         case .footnote:
             fontName = "AvenirNext-Regular"
