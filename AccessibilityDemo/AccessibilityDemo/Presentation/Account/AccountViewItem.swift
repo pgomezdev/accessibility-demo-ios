@@ -13,16 +13,19 @@ struct AccountViewItem: View {
         VStack(alignment: .leading) {
             Text(account.name)
                 .font(.brandCustom(for: .body))
+                .foregroundStyle(Color.onSurface)
             
             Text(accountSuffix)
                 .font(.brandCustom(for: .subheadline))
+                .foregroundStyle(Color.onSurface)
             
             Text(accountBalance)
                 .font(.brandCustom(for: .title3))
+                .foregroundStyle(Color.onSurface)
                 .frame(maxWidth: .infinity, alignment: .trailing)
         }
         .padding()
-        .background(Color.onSupplementary)
+        .background(Color.surface)
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .accessibilityElement(children: .combine)
         .accessibilityAddTraits(.isButton)

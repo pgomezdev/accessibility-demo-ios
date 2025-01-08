@@ -15,7 +15,7 @@ struct InboxView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(UIColor.systemGroupedBackground)
+                Color.background
                     .ignoresSafeArea()
                 
                 ScrollViewReader { scrollView in
@@ -89,7 +89,7 @@ struct InboxView: View {
                 }
             }
             .navigationTitle("inbox.navigation.title")
-            .toolbarBackground(Color(UIColor.systemBackground), for: .navigationBar)
+            .toolbarBackground(Color.background, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: { isEditing.toggle() }, label: {

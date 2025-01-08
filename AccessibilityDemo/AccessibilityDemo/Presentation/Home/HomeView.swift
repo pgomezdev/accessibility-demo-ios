@@ -20,7 +20,7 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(UIColor.systemGroupedBackground)
+                Color.background
                     .ignoresSafeArea()
                 
                 ScrollView {
@@ -33,7 +33,7 @@ struct HomeView: View {
                     .padding(.bottom)
                 }
             }
-            .toolbarBackground(Color(UIColor.systemBackground), for: .navigationBar)
+            .toolbarBackground(Color.background, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button(action: {

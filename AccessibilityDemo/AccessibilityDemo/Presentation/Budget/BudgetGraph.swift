@@ -58,7 +58,7 @@ struct BudgetGraph: View {
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 16)
-                .foregroundColor(Color.onSupplementary)
+                .foregroundColor(Color.surface)
         )
         .padding(.horizontal)
     }

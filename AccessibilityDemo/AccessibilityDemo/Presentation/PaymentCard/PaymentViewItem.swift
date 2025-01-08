@@ -22,11 +22,13 @@ struct PaymentViewItem: View {
             HStack {
                 Text(card.name)
                     .font(.brandCustom(for: .subheadline))
+                    .foregroundStyle(Color.onSurface)
                 
                 Spacer()
                 
                 Text(cardSuffix)
                     .font(.brandCustom(for: .subheadline))
+                    .foregroundStyle(Color.onSurface)
             }
             .padding(.bottom)
             
@@ -49,18 +51,20 @@ struct PaymentViewItem: View {
             HStack {
                 Text(cardBalance)
                     .font(.brandCustom(for: .title3))
+                    .foregroundStyle(Color.onSurface)
                 
                 Spacer()
                 
                 if (card.credit != 0) {
                     Text(cardCredit)
                         .font(.brandCustom(for: .title3))
+                        .foregroundStyle(Color.onSurface)
                         .padding(.leading)
                 }
             }
         }
         .padding()
-        .background(Color.onSupplementary)
+        .background(Color.surface)
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .accessibilityElement(children: .combine)
         .accessibilityAddTraits(.isButton)

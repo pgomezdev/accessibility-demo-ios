@@ -18,10 +18,11 @@ struct InsuranceViewItem: View {
             
             Text(insurance.name)
                 .font(.brandCustom(for: .body))
+                .foregroundStyle(Color.onSurface)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
             .padding()
-            .background(Color.onSupplementary)
+            .background(Color.surface)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .frame(height: 100)
             .accessibilityElement(children: .combine)
