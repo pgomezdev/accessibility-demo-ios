@@ -1321,6 +1321,74 @@
         }
       }
     },
+    "QA_NEW_TRANSFER_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New transfer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nueva transferencia"
+          }
+        }
+      }
+    },
+    "QA_SEARCH_ATM_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search ATMs"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar cajeros"
+          }
+        }
+      }
+    },
+    "quickaction.newTransfer.title" : {
+      "comment" : "Title for new transfer quick action",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New transfer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nueva transferencia"
+          }
+        }
+      }
+    },
+    "quickaction.searchATMs.title" : {
+      "comment" : "Title for search ATMs quick action",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search ATMs"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar cajeros"
+          }
+        }
+      }
+    },
     "root.tab.home" : {
       "localizations" : {
         "en" : {
