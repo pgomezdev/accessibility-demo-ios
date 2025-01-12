@@ -32,6 +32,7 @@
 		6E8870FC2D09A4220039D091 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8870FB2D09A4220039D091 /* LoginView.swift */; };
 		6E8870FE2D09A6F20039D091 /* AccessibilityIdentifier+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8870FD2D09A6E10039D091 /* AccessibilityIdentifier+Login.swift */; };
 		6E8871002D09AC840039D091 /* PinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8870FF2D09AC840039D091 /* PinButton.swift */; };
+		6EAEF8EC2D2FDEA2006330F1 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAEF8EB2D2FDEA2006330F1 /* AboutView.swift */; };
 		6EB305AC2C0DC81F00DB4E7C /* AccessibilityDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB305AB2C0DC81F00DB4E7C /* AccessibilityDemoApp.swift */; };
 		6EB305AE2C0DC81F00DB4E7C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB305AD2C0DC81F00DB4E7C /* HomeView.swift */; };
 		6EB305B02C0DC82000DB4E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EB305AF2C0DC82000DB4E7C /* Assets.xcassets */; };
@@ -45,6 +46,8 @@
 		6EB305E72C0E18B300DB4E7C /* AccessibilityIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB305E62C0E18B300DB4E7C /* AccessibilityIdentifier.swift */; };
 		6EB305E92C0E18DD00DB4E7C /* AccessibilityIdentifier+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB305E82C0E18DD00DB4E7C /* AccessibilityIdentifier+Home.swift */; };
 		6EB305EE2C0E1A6000DB4E7C /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB305ED2C0E1A6000DB4E7C /* Account.swift */; };
+		6EB86C1C2D2FE3D200256196 /* View+Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB86C1B2D2FE3D200256196 /* View+Condition.swift */; };
+		6EB86C1F2D2FE60500256196 /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB86C1E2D2FE60500256196 /* PrivacyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +91,7 @@
 		6E8870FB2D09A4220039D091 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6E8870FD2D09A6E10039D091 /* AccessibilityIdentifier+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccessibilityIdentifier+Login.swift"; sourceTree = "<group>"; };
 		6E8870FF2D09AC840039D091 /* PinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinButton.swift; sourceTree = "<group>"; };
+		6EAEF8EB2D2FDEA2006330F1 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		6EB305A82C0DC81F00DB4E7C /* AccessibilityDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccessibilityDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB305AB2C0DC81F00DB4E7C /* AccessibilityDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityDemoApp.swift; sourceTree = "<group>"; };
 		6EB305AD2C0DC81F00DB4E7C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 		6EB305E62C0E18B300DB4E7C /* AccessibilityIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifier.swift; sourceTree = "<group>"; };
 		6EB305E82C0E18DD00DB4E7C /* AccessibilityIdentifier+Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccessibilityIdentifier+Home.swift"; sourceTree = "<group>"; };
 		6EB305ED2C0E1A6000DB4E7C /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		6EB86C1B2D2FE3D200256196 /* View+Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Condition.swift"; sourceTree = "<group>"; };
+		6EB86C1E2D2FE60500256196 /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +219,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		6EAEF8EA2D2FDE91006330F1 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				6EAEF8EB2D2FDEA2006330F1 /* AboutView.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		6EB3059F2C0DC81F00DB4E7C = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +297,7 @@
 				6E63491C2C11D15F00FB06F8 /* Date+Formatter.swift */,
 				6E727C3D2D0311EC00BD6911 /* Font+Custom.swift */,
 				6E727C3F2D03323900BD6911 /* Color+Custom.swift */,
+				6EB86C1B2D2FE3D200256196 /* View+Condition.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -320,6 +335,8 @@
 			isa = PBXGroup;
 			children = (
 				6E6349122C11C5C700FB06F8 /* RootView.swift */,
+				6EB86C1D2D2FE5F700256196 /* Privacy */,
+				6EAEF8EA2D2FDE91006330F1 /* About */,
 				6E8870FA2D09A40D0039D091 /* Login */,
 				6E727C462D0380C900BD6911 /* Home */,
 				6E727C452D0380C100BD6911 /* Account */,
@@ -344,6 +361,14 @@
 				6E8013A42C1736C4009B94A9 /* Budget.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6EB86C1D2D2FE5F700256196 /* Privacy */ = {
+			isa = PBXGroup;
+			children = (
+				6EB86C1E2D2FE60500256196 /* PrivacyView.swift */,
+			);
+			path = Privacy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,9 +504,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EB305E32C0E124600DB4E7C /* String+Formatter.swift in Sources */,
+				6EAEF8EC2D2FDEA2006330F1 /* AboutView.swift in Sources */,
 				6EB305E72C0E18B300DB4E7C /* AccessibilityIdentifier.swift in Sources */,
 				6E6349132C11C5C700FB06F8 /* RootView.swift in Sources */,
 				6EB305E02C0E100B00DB4E7C /* StubData.swift in Sources */,
+				6EB86C1C2D2FE3D200256196 /* View+Condition.swift in Sources */,
 				6E8013A72C1739C3009B94A9 /* BudgetGraph.swift in Sources */,
 				6E8013A52C1736C4009B94A9 /* Budget.swift in Sources */,
 				6E6349192C11C7FA00FB06F8 /* InboxMessage.swift in Sources */,
@@ -502,6 +529,7 @@
 				6E6DBDF22C0F708C008FA789 /* Insurance.swift in Sources */,
 				6E8870FC2D09A4220039D091 /* LoginView.swift in Sources */,
 				6E6DBDEE2C0F6657008FA789 /* PaymentCard.swift in Sources */,
+				6EB86C1F2D2FE60500256196 /* PrivacyView.swift in Sources */,
 				6E6349172C11C70B00FB06F8 /* AccessibilityIdentifier+Root.swift in Sources */,
 				6E8871002D09AC840039D091 /* PinButton.swift in Sources */,
 				6E6A01702C1308B10010B91B /* LocationsView.swift in Sources */,

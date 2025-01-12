@@ -11,7 +11,9 @@ struct HomeView: View {
     
     @ScaledMetric var navBarImageSize: CGFloat = 30
     
+    @State var isMenuPresented = false
     @State var isHidingValues = false
+    @State var isShowingAlert = false
     @State var accounts: [Account] = []
     @State var cards: [PaymentCard] = []
     @State var insurances: [Insurance] = []
@@ -33,11 +35,14 @@ struct HomeView: View {
                     .padding(.bottom)
                 }
             }
+            .sheet(isPresented: $isMenuPresented) {
+                menuView
+            }
             .toolbarBackground(Color.background, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button(action: {
-                        // TODO: open menu
+                        openMenu()
                     }, label: {
                         Image(systemName: "line.3.horizontal.circle.fill")
                             .resizable()
@@ -183,6 +188,50 @@ struct HomeView: View {
         }
     }
     
+    var menuView: some View {
+        NavigationView {
+            List {
+                Section(header: Text("menu.general.section")) {
+                    Label("menu.profile.title", systemImage: "person.crop.circle")
+                    Label("menu.notifications.title", systemImage: "bell")
+                }
+                
+                Section(header: Text("menu.preferences.section")) {
+                    Label("menu.appearance.title", systemImage: "paintbrush")
+                    NavigationLink(destination: PrivacyView()) {
+                        Label("menu.privacy.title", systemImage: "lock")
+                    }
+                }
+                
+                Section(header: Text("menu.about.section")) {
+                    NavigationLink(destination: AboutView()) {
+                        Label("menu.about.tilte", systemImage: "info.circle")
+                    }
+                }
+                
+                Section {
+                    Button(action: {
+                        isShowingAlert = true
+                    }) {
+                        Label("menu.logout.title", systemImage: "escape")
+                            .foregroundColor(.red)
+                    }
+                    .alert(isPresented: $isShowingAlert) {
+                        Alert(
+                            title: Text("menu.logout.alert.title"),
+                            message: Text("menu.logout.alert.message"),
+                            primaryButton: .destructive(Text("menu.logout.alert.button.confirm")) {
+                                // TODO: log out
+                            },
+                            secondaryButton: .cancel()
+                        )
+                    }
+                }
+            }
+            .navigationTitle("menu.title")
+        }
+    }
+    
     var totalAccountsBalance: String {
         let balance = String.localizedCurrency(from: accounts.reduce(0) { $0 + $1.balance })
         return isHidingValues ? balance.masked() : balance
@@ -198,6 +247,12 @@ struct HomeView: View {
         cards = StubData.cards
         insurances = StubData.insurances
         budgets = StubData.budgets
+    }
+    
+    func openMenu() {
+        withAnimation {
+            isMenuPresented.toggle()
+        }
     }
 }
 

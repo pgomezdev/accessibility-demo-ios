@@ -67,6 +67,7 @@ struct InboxView: View {
                                         .accessibilitySortPriority(1)
                                 }
                                 .accessibilityElement(children: .combine)
+                                .accessibilityInputLabels(["\(index)"])
                                 .accessibilityRotorEntry(id: inboxItems[index].id, in: warningsRotorNamespace)
                             }
                             .padding(.vertical)

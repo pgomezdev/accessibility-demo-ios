@@ -11,6 +11,150 @@
         }
       }
     },
+    "about.item1.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bank Overview"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descripción General del Banco"
+          }
+        }
+      }
+    },
+    "about.item2.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "History and Milestones"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historia y Logros"
+          }
+        }
+      }
+    },
+    "about.item3.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Services and Offerings"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Servicios y Ofertas"
+          }
+        }
+      }
+    },
+    "about.item4.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leadership Team"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Equipo de Liderazgo"
+          }
+        }
+      }
+    },
+    "about.item5.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Social Responsibility"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Responsabilidad Social"
+          }
+        }
+      }
+    },
+    "about.item6.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Customer Testimonials"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testimonios de Clientes"
+          }
+        }
+      }
+    },
+    "about.item7.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Awards and Recognition"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premios y Reconocimientos"
+          }
+        }
+      }
+    },
+    "about.item8.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Call-to-Action"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Llamado a la Acción"
+          }
+        }
+      }
+    },
+    "about.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About Us"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nosotros"
+          }
+        }
+      }
+    },
     "account.item.accessibilityLabel.balance" : {
       "comment" : "Account balance description",
       "localizations" : {
@@ -727,13 +871,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Clears all entered digits"
+            "value" : "Clears last entered digit"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Borra todos los números"
+            "value" : "Borra el último número"
           }
         }
       }
@@ -815,6 +959,214 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld de %lld"
+          }
+        }
+      }
+    },
+    "menu.about.section" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acerca de"
+          }
+        }
+      }
+    },
+    "menu.about.tilte" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acerca de"
+          }
+        }
+      }
+    },
+    "menu.appearance.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appearance"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apariencia"
+          }
+        }
+      }
+    },
+    "menu.general.section" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General"
+          }
+        }
+      }
+    },
+    "menu.logout.alert.button.confirm" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Log Out"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar sesión"
+          }
+        }
+      }
+    },
+    "menu.logout.alert.message" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure you want to log out?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Seguro que quieres cerrar sesión?"
+          }
+        }
+      }
+    },
+    "menu.logout.alert.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirm Logout"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirmar cerrar sesión"
+          }
+        }
+      }
+    },
+    "menu.logout.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Log Out"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar sesión"
+          }
+        }
+      }
+    },
+    "menu.notifications.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notificaciones"
+          }
+        }
+      }
+    },
+    "menu.preferences.section" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preferences"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preferencias"
+          }
+        }
+      }
+    },
+    "menu.privacy.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacidad"
+          }
+        }
+      }
+    },
+    "menu.profile.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perfil"
+          }
+        }
+      }
+    },
+    "menu.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preferences"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preferencias"
           }
         }
       }
@@ -933,6 +1285,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cambio de divisas"
+          }
+        }
+      }
+    },
+    "privacy.content" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pellentesque placerat lacus quis ultrices. Maecenas eu nisl diam. Sed sit amet sapien eros. Sed egestas gravida ante, id molestie neque sodales at. Praesent elementum mi orci, in finibus felis iaculis eu. Etiam ac rhoncus justo. Curabitur finibus sagittis diam a malesuada. Etiam eget tellus maximus, suscipit neque a, ultricies ante. Phasellus blandit tortor nisl. Suspendisse accumsan dolor quis erat aliquam vehicula. Suspendisse euismod eros sit amet lectus malesuada lacinia. Nulla erat libero, placerat eu velit non, laoreet blandit odio. Aenean laoreet neque eu efficitur laoreet. Suspendisse in libero arcu. Phasellus porttitor odio a dignissim congue. Nulla at dolor ante. Nulla facilisi. Integer tempus scelerisque arcu pellentesque tincidunt. Mauris auctor semper ligula, sodales ornare urna. Vivamus tempus tortor nulla, at blandit turpis imperdiet ac. Donec ac lacinia nisl. Praesent ultrices, purus sit amet aliquet blandit, erat elit finibus turpis, at congue risus erat nec metus. Nunc sed dictum nisi, nec scelerisque lacus. Mauris at felis urna. Nunc dictum interdum mauris sit amet gravida. Nam auctor, ante at ullamcorper molestie, mauris odio sollicitudin felis, id egestas urna quam at enim. Curabitur et ex diam."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pellentesque placerat lacus quis ultrices. Maecenas eu nisl diam. Sed sit amet sapien eros. Sed egestas gravida ante, id molestie neque sodales at. Praesent elementum mi orci, in finibus felis iaculis eu. Etiam ac rhoncus justo. Curabitur finibus sagittis diam a malesuada. Etiam eget tellus maximus, suscipit neque a, ultricies ante. Phasellus blandit tortor nisl. Suspendisse accumsan dolor quis erat aliquam vehicula. Suspendisse euismod eros sit amet lectus malesuada lacinia. Nulla erat libero, placerat eu velit non, laoreet blandit odio. Aenean laoreet neque eu efficitur laoreet. Suspendisse in libero arcu. Phasellus porttitor odio a dignissim congue. Nulla at dolor ante. Nulla facilisi. Integer tempus scelerisque arcu pellentesque tincidunt. Mauris auctor semper ligula, sodales ornare urna. Vivamus tempus tortor nulla, at blandit turpis imperdiet ac. Donec ac lacinia nisl. Praesent ultrices, purus sit amet aliquet blandit, erat elit finibus turpis, at congue risus erat nec metus. Nunc sed dictum nisi, nec scelerisque lacus. Mauris at felis urna. Nunc dictum interdum mauris sit amet gravida. Nam auctor, ante at ullamcorper molestie, mauris odio sollicitudin felis, id egestas urna quam at enim. Curabitur et ex diam."
+          }
+        }
+      }
+    },
+    "privacy.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Política de privacidad"
           }
         }
       }

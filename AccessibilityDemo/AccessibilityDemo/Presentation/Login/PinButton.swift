@@ -36,8 +36,10 @@ struct PinButton: View {
                 .cornerRadius(40)
                 .accessibilityHidden(true)
         }
+        .accessibilityLabel("\(number)")
         .accessibilityAddTraits(.isKeyboardKey)
         .accessibilityFocused($isFocused)
+        .accessibilityInputLabels(["\(number)"])
         .onChange(of: isFocused) { newValue, _ in
             if isFocused {
                 if number == 0 {
