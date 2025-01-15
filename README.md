@@ -1,61 +1,67 @@
 # AccessibilityDemo
 
-Welcome to the AccessibilityDemo project! This iOS SwiftUI app showcases how to implement various accessibility features using a fake bank app as an example. Below are the key features and components of the app.
+This repository contains a simple example banking app created with SwiftUI to showcase accessibility best practices in iOS development. The app demonstrates how to make user interfaces inclusive and accessible to a wide range of users, including those with vision or mobility impairments.
 
-## Features
+# Purpose
+
+The purpose of this project is to illustrate how to implement and integrate various accessibility features in an iOS app using SwiftUI. By adhering to accessibility guidelines, we ensure that everyone can have an equitable and pleasant user experience.
+
+# Accessibility Features
+
+## Vision
+
+This section focuses on users with visual impairments. The app supports features such as VoiceOver, Dynamic Type, and others to ensure clarity and usability.
+
+### VoiceOver Support
+
+* accessibilityLabel: Provides a concise label that succinctly identifies the accessibility element.
+* accessibilityHint: Offers additional context or guidance on what the element does.
+* accessibilityAddTraits: Adds custom traits to the accessibility element to modify its behavior.
+* accessibilityElement: Specifies whether the view should be treated as a single accessibility element or a container.
+    * See account items in HomeView at [AccountViewItem.swift (lines 30-34)](AccessibilityDemo/AccessibilityDemo/Presentation/Account/AccountViewItem.swift#L30-L34)
+* accessibilitySortPriority: Defines the priority for how elements are read by VoiceOver.
+   * See inbox items in InboxView at [InboxView.swift (line 31)](AccessibilityDemo/AccessibilityDemo/Presentation/Inbox/InboxView.swift#L31)
+* accessibilityRotorEntry: Allows custom rotors to navigate specific elements quickly.
+   * See warning inbox items in InboxView at [InboxView.swift (lines 81-89)](AccessibilityDemo/AccessibilityDemo/Presentation/Inbox/InboxView.swift#L81-L89)
+* accessibilityChildren: Provides a collection of elements that are logically children of the current element.
+
+### DynamicType Support
+
+* DynamicStack: A custom view container that chooses between HStack and VStack, useful for fitting large content on the screen.
+   * See the section titles and values in HomeView at [HomeView.swift (line 86)](AccessibilityDemo/AccessibilityDemo/Presentation/Inbox/InboxView.swift#L81-L89)
+ 
+* Font+Custom extension: Creates a custom brand font relative to a default style supporting the boldTextEnabled setting for users who prefer bold text. [Font+Custom.swift)](AccessibilityDemo/AccessibilityDemo/Extensions/Font+Custom.swift)
+
+### Other vision settings
+
+* Dark mode and high contrast are supported by using default system colors, which automatically adapt to these settings.
+* ReduceMotion is used to disable animations at [AboutView.swift](AccessibilityDemo/AccessibilityDemo/Presentation/About/AboutView.swift)
+* ReduceTransparency is used to hide blurry images at [PrivacyView.swift](AccessibilityDemo/AccessibilityDemo/Presentation/Privacy/PrivacyView.swift)
+
+## Mobility
+
+This section addresses users with limited mobility. The app supports Voice Control and Switch Control for hands-free navigation and interaction.
+
+### VoiceControl and SwitchControl Support
+
+* accessibilityInputLabel: Specifies a label that describes the input expected by the element.
+   * See menu button in HomeView at [HomeView.swift (line 31)](AccessibilityDemo/AccessibilityDemo/Presentation/Home/HomeView.swift#L55)
+
+* Alternative design for inbox messages edition: The list of inbox messages can be edited. Users can slide to delete messages or use an alternative button if they cannot perform the slide movement. This is specially useful when using VoiceControl and SwitchControl. [InboxView.swift (line 31)](AccessibilityDemo/AccessibilityDemo/Presentation/Inbox/InboxView.swift)
+
+## Inclusive design
 
 ### Localization
 * Localizable File: Translations are set using a Localizable file to support multiple languages and enhance accessibility for non-English speaking users.
 
-### Accessibility Statistics
+### Colors
+* Cultural Color Variations: Some colors represent emotions and are set depending on different cultural contexts. [Color+Custom.swift](AccessibilityDemo/AccessibilityDemo/Extensions/Color+Custom.swift)
+
+## Accessibility Statistics
 * Accessibility Features Report: Important accessibility features are read at the beginning of the app. These features can be sent to a private server to collect accessibility statistics, which help improve the app's accessibility over time.
 
-### Colors
-* AppColor Class: Defines the colors used in the app, supporting system colors that automatically adapt to high contrast and dark modes. Custom colors have variations added for these modes.
-* Cultural Color Variations: Some colors represent emotions and are set depending on different cultural contexts.
+By implementing these features, this app serves as a template for creating inclusive and user-friendly iOS applications.
 
-### Fonts
-* AppFont Class: Defines the fonts used in the app and supports the boldTextEnabled setting for users who prefer bold text.
-
-## Accessibility Enhancements
-
-### Accessibility Features
-* accessibilityLabel: Provides a concise label that succinctly identifies the accessibility element.
-    * e.g. Used in the AccountThumb view.
-* accessibilityHint: Offers additional context or guidance on what the element does.
-    * e.g. Utilized in the AccountThumb view for buttons.
-* accessibilityInputLabel: Specifies a label that describes the input expected by the element.
-    * e.g. Implemented in the AccountThumb view for input fields.
-* accessibilityAddTraits: Adds custom traits to the accessibility element to modify its behavior.
-    * e.g. Showcased in the AccountThumb view.
-* accessibilitySortPriority: Defines the priority for how elements are read by VoiceOver.
-    * e.g. Used in the Inbox screen to reorder elements for VoiceOver.
-* accessibilityRotorEntry: Allows custom rotors to navigate specific elements quickly.
-    * e.g. Custom rotor entry for "Warnings" in the Inbox screen and for ATMs in the Map view.
-* accessibilityChildren: Provides a collection of elements that are logically children of the current element.
-    * e.g. Applied in the BudgetGraph class for graph elements.
-* accessibilityElement: Specifies whether the view should be treated as a single accessibility element or a container.
-    * e.g. Used in various views to control how VoiceOver navigates the elements.
-
-### Custom Views and Controls
-* DynamicStack: A custom view container that chooses between HStack and VStack, useful for fitting large content on the screen. It is used in the headers of the HomeView.
-* Editing Messages: The list of inbox messages can be edited. Users can slide to delete messages or use an alternative button if they cannot perform the slide movement.
-
-## Animation Control
-* Accessibility Reduce Motion: Data loading animations are disabled if the "Accessibility Reduce Motion" setting is enabled.
-* Dim Flashing Lights: While not utilized in this demo project, could reduce or alter flashing light effects that may be problematic for some users.
-* Reduce Transparency: Also not featured in this demo, but could minimize transparency effects to enhance visibility and clarity for some users.
-
-## How to Use
-1. Localization: Ensure that your device language is supported by checking the Localizable file.
-2. VoiceOver: Enable VoiceOver to experience the custom accessibility labels, hints, and traits.
-3. High Contrast and Dark Mode: Toggle these settings on your device to see the automatic color adjustments.
-4. Bold Text: Enable the bold text setting to see the changes in the app's fonts.
-5. Accessibility Reduce Motion: Enable the "Accessibility Reduce Motion" setting to disable data loading animations.
-6. Custom Rotors: Use custom rotors to navigate through specific content like warnings in the inbox or ATMs on the map view.
-
-While there are many more accessibility features available, this project focuses on the basics. I hope this demo app helps you understand and incorporate accessibility features into your own projects. Your feedback is valuable, so let me know which other features do you think are important to make apps more accessible for everyone.
-
-## Contact
+# Contact
 
 For questions, feedback, or contributions, please reach out to me at [pgomez.ping@gmail.com].
