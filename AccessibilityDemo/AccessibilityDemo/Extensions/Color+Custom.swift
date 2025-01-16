@@ -7,6 +7,12 @@ import SwiftUI
 
 extension Color {
     
+    struct custom {
+        static let special1: Color = Color("Special1")
+        static let special2: Color = Color("Special2")
+        static let special3: Color = Color("Special3")
+    }
+    
     /**
      A static variable that returns a "negative" color based on the user's region.
      

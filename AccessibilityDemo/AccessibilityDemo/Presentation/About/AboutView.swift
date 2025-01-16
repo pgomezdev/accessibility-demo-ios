@@ -21,7 +21,7 @@ struct AboutView: View {
         NSLocalizedString("about.item8.title", comment: "")
     ]
     
-    let colors = [Color.main, Color.mint, Color.supplementary]
+    let colors = [Color.custom.special1, Color.custom.special2, Color.custom.special3]
     
     var body: some View {
         VStack {
