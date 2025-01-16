@@ -34,7 +34,7 @@ This section focuses on users with visual impairments. The app supports features
 
 ### Other vision settings
 
-* Dark mode and high contrast are supported by using default system colors, which automatically adapt to these settings.
+* Dark mode and high contrast are supported by using default system colors, which automatically adapt to these settings, and custom colors from Assets including dark and high contrast variations.
 * ReduceMotion is used to disable animations at [AboutView.swift](AccessibilityDemo/AccessibilityDemo/Presentation/About/AboutView.swift)
 * ReduceTransparency is used to hide blurry images at [PrivacyView.swift](AccessibilityDemo/AccessibilityDemo/Presentation/Privacy/PrivacyView.swift)
 
