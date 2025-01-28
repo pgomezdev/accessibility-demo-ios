@@ -493,6 +493,199 @@
         }
       }
     },
+    "home.offer.action.accessibilityLabel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apply Now for 5 percent deposit offer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solicite ahora la oferta de depósito del 5 por ciento"
+          }
+        }
+      }
+    },
+    "home.offer.action.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apply Now"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplicar ahora"
+          }
+        }
+      }
+    },
+    "home.offer.announcement" : {
+      "comment" : "Announcement made by VoiceOver to inform user about the offer",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The screen has been updated with a new deposit offer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La pantalla se ha actualizado con una nueva oferta de depósito"
+          }
+        }
+      }
+    },
+    "home.offer.conditions1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No monthly fees"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin cuotas mensuales"
+          }
+        }
+      }
+    },
+    "home.offer.conditions2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guaranteed returns"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Devoluciones garantizadas"
+          }
+        }
+      }
+    },
+    "home.offer.conditions3" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minimum deposit: $1,000"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Depósito mínimo: 1.000 €"
+          }
+        }
+      }
+    },
+    "home.offer.discard.accessibilityLabel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ignore this offer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ignorar esta oferta"
+          }
+        }
+      }
+    },
+    "home.offer.discard.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Discard"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descartar"
+          }
+        }
+      }
+    },
+    "home.offer.rate.key" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Interest Rate:"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tasa de interés:"
+          }
+        }
+      }
+    },
+    "home.offer.rate.value" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5.00% APY"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5.00% TAE"
+          }
+        }
+      }
+    },
+    "home.offer.subtitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Earn up to a market-leading rate with our secure 12-month fixed deposit. Grow your savings faster!"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gane hasta una tasa líder en el mercado con nuestro depósito fijo seguro de 12 meses. ¡Haz crecer tus ahorros más rápido!"
+          }
+        }
+      }
+    },
+    "home.offer.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exclusive Deposit Offer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oferta de depósito exclusivo"
+          }
+        }
+      }
+    },
     "home.paymentCards.title" : {
       "localizations" : {
         "en" : {

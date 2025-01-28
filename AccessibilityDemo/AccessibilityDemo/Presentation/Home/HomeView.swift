@@ -12,6 +12,7 @@ struct HomeView: View {
     @ScaledMetric var navBarImageSize: CGFloat = 30
     
     @State var isMenuPresented = false
+    @State var isOfferPresented = false
     @State var isHidingValues = false
     @State var isShowingAlert = false
     @State var accounts: [Account] = []
@@ -37,6 +38,9 @@ struct HomeView: View {
             }
             .sheet(isPresented: $isMenuPresented) {
                 menuView
+            }
+            .sheet(isPresented: $isOfferPresented) {
+                offerView
             }
             .toolbarBackground(Color.background, for: .navigationBar)
             .toolbar {
@@ -78,7 +82,18 @@ struct HomeView: View {
         }
         .onAppear {
             loadData()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+                isOfferPresented = true
+            })
         }
+        .onChange(of: isOfferPresented, { _, newValue in
+            if newValue {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    UIAccessibility.post(notification: .announcement, argument: NSLocalizedString("home.offer.announcement", comment: "Announcement made by VoiceOver to inform user about the offer"))
+                }
+            }
+        })
     }
     
     var accountsView: some View {
@@ -229,6 +244,77 @@ struct HomeView: View {
                 }
             }
             .navigationTitle("menu.title")
+        }
+    }
+    
+    var offerView: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 16) {
+                Text("home.offer.title")
+                    .font(.brandCustom(for: .title))
+                
+                Text("home.offer.subtitle")
+                    .font(.brandCustom(for: .body))
+                    .foregroundColor(.secondary)
+                
+                HStack {
+                    Text("home.offer.rate.key")
+                        .font(.brandCustom(for: .headline))
+                    Text("home.offer.rate.value")
+                        .font(.brandCustom(for: .title))
+                }
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    HStack {
+                        Image(systemName: "checkmark.circle.fill")
+                            .foregroundColor(.blue)
+                            .accessibilityHidden(true)
+                        Text("home.offer.conditions1")
+                    }
+                    HStack {
+                        Image(systemName: "checkmark.circle.fill")
+                            .foregroundColor(.blue)
+                            .accessibilityHidden(true)
+                        Text("home.offer.conditions2")
+                    }
+                    HStack {
+                        Image(systemName: "checkmark.circle.fill")
+                            .foregroundColor(.blue)
+                            .accessibilityHidden(true)
+                        Text("home.offer.conditions3")
+                    }
+                }
+                .font(.brandCustom(for: .subheadline))
+                
+                Spacer()
+                
+                Button(action: {
+                    print("Apply Now button tapped")
+                }) {
+                    Text("home.offer.action.title")
+                        .font(.brandCustom(for: .headline))
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                .accessibilityLabel("home.offer.action.accessibilityLabel")
+                
+                Button(action: {
+                    isOfferPresented = false
+                }) {
+                    Text("home.offer.discard.title")
+                        .font(.brandCustom(for: .headline))
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.black)
+                        .cornerRadius(10)
+                }
+                .accessibilityLabel("home.offer.discard.accessibilityLabel")
+            }
+            .padding()
         }
     }
     
