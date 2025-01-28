@@ -67,7 +67,6 @@ struct LoginView: View {
                     enteredPin.removeLast()
                 })
                     .foregroundColor(.red)
-                    .frame(width: 80, height: 80)
                     .accessibilityHint("login.clear.button.hint")
             }
             .padding()
