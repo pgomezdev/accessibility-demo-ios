@@ -24,6 +24,8 @@ This section focuses on users with visual impairments. The app supports features
 * accessibilityRotorEntry: Allows custom rotors to navigate specific elements quickly.
    * See warning inbox items in InboxView at [InboxView.swift (lines 81-89)](AccessibilityDemo/AccessibilityDemo/Presentation/Inbox/InboxView.swift#L81-L89)
 * accessibilityChildren: Provides a collection of elements that are logically children of the current element.
+* UIAccessibility.post: Informs users about changes in the screen. This can be used so external triggered content updates don't confuse users.
+   * See offer modal in HomeView at [HomeView.swift (line 93)](AccessibilityDemo/AccessibilityDemo/Presentation/Home/HomeView.swift#L93)
 
 ### DynamicType Support
 
